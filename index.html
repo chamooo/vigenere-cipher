@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vinger</title>
+</head>
+
+<body>
+    <div class="page">
+        <a href="https://github.com/chamooo" target="_blank" class="copy">&copy; Roman Melnychuk</a>
+        <div class="left-column column">
+            <h1 class="title">Шифр Віженера</h1>
+            <h3 class="expand">Розгорнути <i class="fa-solid fa-chevron-down"></i></h3>
+            <div class="content">
+                <p>
+                    Шифр Віженера — поліалфавітний шифр, який як ключ використовує слово.
+                    Якщо пронумерувати літери алфавіту від 0 до 32 (а → 0, б → 1, в → 2, …), то шифрування Віженера є
+                    можливим представити формулою:
+                    Ci = (Pi + Kj) mod 33,
+                    де Kj — j-та літера ключового слова, Pi — і-а літера вихідного слова.
+                    Ключове слово повторюється, поки не отримано гаму, рівну довжині повідомлення.
+                    Дешифрування відбувається за наступною формулою:
+                    Ci = (Pi + 33 - Kj) mod 33
+                </p>
+                <p> Ця програма демонструє шифрування та дешифрування повідомлення за допомогою синхронного шифру Віженера. Ключ повинен містити
+                    хоча б одну літеру. Ключ не чутливий до регістру і нелітерні символи ігноруються. При шифруванні
+                    або дешифруванні регістр зберігається, а нелітерні символи залишаються незмінними. ЛІТЕРИ ПОВИННІ БУТИ ЛАТИНСЬКИМИ
+                </p>
+                <h4>Джерела</h4>
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.wiki.uk-ua.nina.az/%D0%A8%D0%B8%D1%84%D1%80_%D0%92%D1%96%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D0%B0.html">Джерело 1</a> 
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://stackoverflow.com/questions/54854357/vigen%C3%A8re-cipher-in-javascript-showing-or-characters">Джерело 2</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="left-column__inputs">
+                <h3 class="name">Ваше секретне повідомлення:</h3>
+                <textarea id="text" type="text"></textarea>
+                <h3 class="name">Ключ:</h3>
+                <input id="key" type="text">
+            </div>
+            <div class="btn-box">
+                <button id="encrypt"><i class="fa-solid fa-lock"></i>Зашифрувати</button>
+                <button id="decrypt"><i class="fa-solid fa-lock-open" style="margin-right: 3px;"></i>
+                    Розшифрувати</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
